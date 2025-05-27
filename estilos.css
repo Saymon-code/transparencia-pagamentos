@@ -11,6 +11,7 @@ body {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
   max-width: 1000px;
   margin: 0 auto;
+  overflow-x: auto;
 }
 h2 {
   color: #1a2a4a;
@@ -19,7 +20,7 @@ h2 {
 }
 .form-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: 20px;
 }
 label {
