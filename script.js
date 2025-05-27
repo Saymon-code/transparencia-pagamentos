@@ -61,6 +61,39 @@ document.getElementById("exportForm").addEventListener("submit", function (e) {
     });
 });
 
+document.querySelector(".btn-limpar").addEventListener("click", function () {
+  const mensagem = document.getElementById("mensagem");
+  mensagem.innerText = "Limpando filtros...";
+
+  fetch("https://script.google.com/macros/s/AKfycbwKkrN-9bpai3yCdioTu6xYtD7tQ22yCuFQThNCyeP9rNzGnjrYjuk1uGFtoxAqpQg/exec", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/x-www-form-urlencoded"
+    },
+    body: new URLSearchParams({
+      ano: "",
+      mes: "",
+      secretaria: "",
+      empenho: "",
+      processo: "",
+      credor: ""
+    })
+  })
+    .then(response => response.json())
+    .then(data => {
+      if (data.success) {
+        mensagem.innerText = "Filtros limpos. Todos os dados carregados!";
+        document.getElementById("exportForm").reset();
+      } else {
+        mensagem.innerText = "Erro ao limpar.";
+      }
+    })
+    .catch(error => {
+      console.error("Erro:", error);
+      mensagem.innerText = "Erro ao se conectar ao servidor.";
+    });
+});
+
 document.getElementById("btnExportar").addEventListener("click", function () {
-  window.open("https://docs.google.com/spreadsheets/d/1lqKdfefhDCYTvVl2pxHJk0F3TYSqWPbQwvFdxhYZxQ0/export?format=csv&gid=325491086", "_blank");
+  window.open("https://docs.google.com/spreadsheets/d/1lqKdfefhDCYTvVl2pxHJk0F3TYSqWPbQwvFdxhYZxQ0/export?format=csv&gid=1289690590", "_blank");
 });
