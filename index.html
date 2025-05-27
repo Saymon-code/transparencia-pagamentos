@@ -1,0 +1,54 @@
+// index.html
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Consulta de Pagamentos</title>
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+  <div class="form-container">
+    <h2>Consulta - Ordem Cronológica de Pagamentos</h2>
+    <form id="exportForm">
+      <div class="form-grid">
+        <div>
+          <label for="ano">Ano</label>
+          <select id="ano" name="ano">
+            <option value="">Carregando...</option>
+          </select>
+        </div>
+        <div>
+          <label for="mes">Mês</label>
+          <select id="mes" name="mes">
+            <option value="">Carregando...</option>
+          </select>
+        </div>
+        <div>
+          <label for="secretaria">Secretaria</label>
+          <input type="text" id="secretaria" name="secretaria" placeholder="Pesquisar...">
+        </div>
+        <div>
+          <label for="empenho">Empenho</label>
+          <input type="text" id="empenho" name="empenho" placeholder="Pesquisar...">
+        </div>
+        <div>
+          <label for="processo">Processo</label>
+          <input type="text" id="processo" name="processo" placeholder="Pesquisar...">
+        </div>
+        <div>
+          <label for="credor">Credor</label>
+          <input type="text" id="credor" name="credor" placeholder="Pesquisar...">
+        </div>
+      </div>
+      <div class="form-actions">
+        <button type="reset" class="btn-limpar">Limpar Filtros</button>
+        <button type="submit" class="btn-filtrar">Filtrar</button>
+        <button type="button" class="btn-exportar" id="btnExportar">Exportar</button>
+      </div>
+    </form>
+    <div id="mensagem"></div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
