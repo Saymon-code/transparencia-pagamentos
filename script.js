@@ -1,5 +1,5 @@
 window.addEventListener("DOMContentLoaded", function () {
-  fetch("https://script.google.com/macros/s/AKfycbwKkrN-9bpai3yCdioTu6xYtD7tQ22yCuFQThNCyeP9rNzGnjrYjuk1uGFtoxAqpQg/exec")
+  fetch("https://script.google.com/macros/s/AKfycbwDY1dh8UkRaN26rydjn4M4_qHrEbAHiMaAVQqxKB8IN-5CBifmR4GwenU2yDbg458r/exec")
     .then(response => response.json())
     .then(data => {
       const anoSelect = document.getElementById("ano");
@@ -40,7 +40,7 @@ document.getElementById("exportForm").addEventListener("submit", function (e) {
   const mensagem = document.getElementById("mensagem");
   mensagem.innerText = "Processando...";
 
-  fetch("https://script.google.com/macros/s/AKfycbwKkrN-9bpai3yCdioTu6xYtD7tQ22yCuFQThNCyeP9rNzGnjrYjuk1uGFtoxAqpQg/exec", {
+  fetch("https://script.google.com/macros/s/AKfycbwDY1dh8UkRaN26rydjn4M4_qHrEbAHiMaAVQqxKB8IN-5CBifmR4GwenU2yDbg458r/exec", {
     method: "POST",
     headers: {
       "Content-Type": "application/x-www-form-urlencoded"
@@ -65,7 +65,7 @@ document.querySelector(".btn-limpar").addEventListener("click", function () {
   const mensagem = document.getElementById("mensagem");
   mensagem.innerText = "Limpando filtros...";
 
-  fetch("https://script.google.com/macros/s/AKfycbwKkrN-9bpai3yCdioTu6xYtD7tQ22yCuFQThNCyeP9rNzGnjrYjuk1uGFtoxAqpQg/exec", {
+  fetch("https://script.google.com/macros/s/AKfycbwDY1dh8UkRaN26rydjn4M4_qHrEbAHiMaAVQqxKB8IN-5CBifmR4GwenU2yDbg458r/exec", {
     method: "POST",
     headers: {
       "Content-Type": "application/x-www-form-urlencoded"
