@@ -4,6 +4,7 @@ body {
   padding: 40px;
   margin: 0;
 }
+
 .form-container {
   background-color: #ffffff;
   padding: 25px 35px;
@@ -11,17 +12,21 @@ body {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
   max-width: 1000px;
   margin: 0 auto;
+  overflow-x: auto;
 }
+
 h2 {
   color: #1a2a4a;
   margin-bottom: 25px;
   font-size: 22px;
 }
+
 .form-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   gap: 20px;
 }
+
 label {
   font-weight: 600;
   display: block;
@@ -29,6 +34,7 @@ label {
   color: #333;
   font-size: 14px;
 }
+
 input,
 select {
   width: 100%;
@@ -38,16 +44,20 @@ select {
   font-size: 14px;
   background-color: #fafafa;
 }
+
 input:focus,
 select:focus {
   outline: none;
   border-color: #4078c0;
   background-color: #fff;
 }
+
 .form-actions {
   margin-top: 30px;
   text-align: right;
+  flex-wrap: wrap;
 }
+
 button {
   padding: 10px 20px;
   border: none;
@@ -57,27 +67,34 @@ button {
   margin-left: 10px;
   transition: background-color 0.3s ease;
 }
+
 .btn-filtrar {
   background-color: #3366cc;
   color: white;
 }
+
 .btn-filtrar:hover {
   background-color: #2a57b3;
 }
+
 .btn-limpar {
   background-color: #cc3333;
   color: white;
 }
+
 .btn-limpar:hover {
   background-color: #b32a2a;
 }
+
 .btn-exportar {
   background-color: #6a1b9a;
   color: white;
 }
+
 .btn-exportar:hover {
   background-color: #58107e;
 }
+
 #mensagem {
   margin-top: 20px;
   font-size: 14px;
